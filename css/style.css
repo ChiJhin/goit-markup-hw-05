@@ -69,7 +69,9 @@ body {
 .nav-list {
     display: flex;
 }
-
+.nav-item {
+    position: relative;
+}
 .nav-list > .nav-item:not(:last-child) {
     margin-right: 50px;
 }
@@ -103,7 +105,15 @@ body {
     color: var(--sub-bg-color);
     
 }
-
+.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 4px solid var(--sub-bg-color);
+    border-radius: 2px;
+}
 
 .current:hover,
 .current:focus {
