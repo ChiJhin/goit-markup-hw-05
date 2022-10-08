@@ -13,7 +13,10 @@ body {
     --icon-color: #AFB1B8;
     --special-text-color: #ffffff;
     --light-blue-color: #188CE8;
+    --tr-du: 250ms;
+    --timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 
 /* Скидання стандартних стилів браузера та правила для секцій */
@@ -97,6 +100,8 @@ body {
 
 .nav-link:hover,
 .nav-link:focus {
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     color: var(--sub-bg-color);
 }
 
@@ -117,6 +122,8 @@ body {
 
 .current:hover,
 .current:focus {
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     color: var(--light-blue-color);
 }
 
@@ -132,6 +139,8 @@ body {
 
 .nav-link:hover .contact-icon,
 .nav-link:focus .contact-icon {
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     fill: var(--sub-bg-color);
 }
 
@@ -193,6 +202,8 @@ body {
 
 .soc-link:hover,
 .soc-link:focus {
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     background-color: var(--sub-bg-color);
 }
 .soc-icon {
@@ -246,6 +257,8 @@ body {
     cursor: pointer;
 }
 .btn:hover, .btn:focus {
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     background-color: var(--light-blue-color);
 }
 
@@ -331,7 +344,8 @@ body {
     height: 70px;
     width: 100%;
     
-    background-color: rgba(47, 48, 58, 0.8);
+    background-color: #2f303a;
+    opacity: 0.8;
 
 }
 .poster-text {
@@ -407,6 +421,8 @@ body {
 
 .team-wrap .soc-link:hover,
 .team-wrap .soc-link:focus {
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     background-color: var(--sub-bg-color);
 }
 .team-wrap .soc-icon {
@@ -414,6 +430,8 @@ body {
 }
 .team-wrap .soc-link:hover .soc-icon,
 .team-wrap .soc-link:focus .soc-icon {
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     fill: var(--special-text-color);
 }
 
@@ -438,17 +456,20 @@ body {
 .company-icon {
     fill: var(--icon-color);
 }
+
 .company-link:hover,
 .company-link:focus {
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     border-color: var(--sub-bg-color);
-
-    
 }
-
 .company-link:hover .company-icon,
 .company-link:focus .company-icon {
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     fill: var(--sub-bg-color);
 }
+
 
 /* --------------------Портфоліо-------------------- */
 
@@ -474,6 +495,8 @@ body {
 
 .list-btn .btn:hover,
 .list-btn .btn:focus {
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     background-color: var(--sub-bg-color);
     color: var(--special-text-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
@@ -501,6 +524,8 @@ body {
     width: 370px;
 }
 .card-item:hover {
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
