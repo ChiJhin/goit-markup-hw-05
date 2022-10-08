@@ -313,12 +313,36 @@ body {
     text-align: center;
 }
 
-.pic {
-    display: block;
-}
 
 .poster {
     padding-top: 0;
+}
+.poster-item {
+    display: flex;
+    position: relative;
+}
+.pic {
+    display: block;
+}
+.poster-thumb {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+    background-color: rgba(47, 48, 58, 0.8);
+
+}
+.poster-text {
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    text-transform: uppercase;
+    
+    color: var(--special-text-color);
 }
 
 .poster .title,
