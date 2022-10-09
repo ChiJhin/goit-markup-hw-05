@@ -127,7 +127,8 @@ body {
     display: block;
     position: absolute;
     left: 0;
-    bottom: -2px;
+    bottom: 0;
+    transform: translateY(2px);
     width: 100%;
     height: 4px;
     background-color: var(--sub-bg-color);
@@ -439,7 +440,6 @@ body {
 }
 .team-wrap .soc-icon {
     transition-property: fill;
-    transition-property: var(--tr-pr);
     transition-duration: var(--tr-du);
     transition-timing-function: var(--timing);
     fill: var(--icon-color);
@@ -562,6 +562,36 @@ body {
     border-bottom: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
 }
+.pic-wrap {
+    position: relative;
+    overflow: hidden;
+}
+.pic-thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    transform: translateY(100%);
+    transition: transform var(--tr-du) var(--timing);
+
+    padding: 63px 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+
+}
+.pic-text {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.55;
+
+    color: var(--special-text-color);
+}
+.card-item:hover .pic-thumb{
+    transform: translateY(0);
+    
+}
 
 .title-portfolio {
     margin-bottom: 4px;
@@ -574,6 +604,47 @@ body {
     font-size: 16px;
     line-height: 1.88;
 }
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: 1px solid tomato;
+    background-color: rgba(0, 0, 0, 0.2);
 
+}
+.modal {
+    outline: 1px solid rgb(159, 11, 11);
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+    border-radius: 4px;
+    width: 528px;
+    height: 581px;
+
+    background-color: var(--special-text-color);
+    box-shadow: 0px 1px 3px 
+    rgba(0, 0, 0, 0.12), 0px 1px 1px 
+    rgba(0, 0, 0, 0.14), 0px 2px 1px 
+    rgba(0, 0, 0, 0.2);
+}
+.close-button {
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+}
+.close-icon {
+    fill: #000000;
+}
 
