@@ -4,6 +4,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.03em;
+    margin: 0;
 }
 
 :root {
@@ -72,9 +73,7 @@ body {
 .nav-list {
     display: flex;
 }
-.nav-item {
-    position: relative;
-}
+
 .nav-list > .nav-item:not(:last-child) {
     margin-right: 50px;
 }
@@ -84,6 +83,9 @@ body {
 }
 
 .nav-link {
+    transition-property: color;
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -100,31 +102,36 @@ body {
 
 .nav-link:hover,
 .nav-link:focus {
-    transition-duration: var(--tr-du);
-    transition-timing-function: var(--timing);
+   
     color: var(--sub-bg-color);
 }
 
 .current {
     
+    position: relative;
+    transition-property: color;
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     color: var(--sub-bg-color);
     
-}
-.current::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    border-bottom: 4px solid var(--sub-bg-color);
-    border-radius: 2px;
 }
 
 .current:hover,
 .current:focus {
-    transition-duration: var(--tr-du);
-    transition-timing-function: var(--timing);
+    
     color: var(--light-blue-color);
+}
+
+.current::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--sub-bg-color);
+    border-radius: 2px;
 }
 
 .contact-menu {
@@ -132,6 +139,9 @@ body {
     margin-left: auto;
 }
 .contact-icon {
+    transition-property: fill;
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     margin-right: 10px;
     align-items: baseline;
     fill: var(--sub-text-color);
@@ -139,8 +149,7 @@ body {
 
 .nav-link:hover .contact-icon,
 .nav-link:focus .contact-icon {
-    transition-duration: var(--tr-du);
-    transition-timing-function: var(--timing);
+    
     fill: var(--sub-bg-color);
 }
 
@@ -189,6 +198,9 @@ body {
 }
 
 .soc-link {
+    transition-property: background-color;
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     display: flex;
     border-radius: 50%;
     width: 44px;
@@ -202,8 +214,7 @@ body {
 
 .soc-link:hover,
 .soc-link:focus {
-    transition-duration: var(--tr-du);
-    transition-timing-function: var(--timing);
+    
     background-color: var(--sub-bg-color);
 }
 .soc-icon {
@@ -241,6 +252,9 @@ body {
     line-height: 1.36;
 }
 .btn {
+    transition-property: background-color;
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     padding-top: 10px;
     padding-right: 32px;
     padding-bottom: 10px;
@@ -257,8 +271,7 @@ body {
     cursor: pointer;
 }
 .btn:hover, .btn:focus {
-    transition-duration: var(--tr-du);
-    transition-timing-function: var(--timing);
+    
     background-color: var(--light-blue-color);
 }
 
@@ -421,17 +434,19 @@ body {
 
 .team-wrap .soc-link:hover,
 .team-wrap .soc-link:focus {
-    transition-duration: var(--tr-du);
-    transition-timing-function: var(--timing);
+    
     background-color: var(--sub-bg-color);
 }
 .team-wrap .soc-icon {
+    transition-property: fill;
+    transition-property: var(--tr-pr);
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     fill: var(--icon-color);
 }
 .team-wrap .soc-link:hover .soc-icon,
 .team-wrap .soc-link:focus .soc-icon {
-    transition-duration: var(--tr-du);
-    transition-timing-function: var(--timing);
+    
     fill: var(--special-text-color);
 }
 
@@ -444,6 +459,9 @@ body {
     margin-top: 50px;
 }
 .company-link{
+    transition-property: border-color;
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     width: 170px;
     height: 92px;
     display: flex;
@@ -454,19 +472,20 @@ body {
     cursor: pointer;
 }
 .company-icon {
+    transition-property: fill;
+    transition-duration: var(--tr-du);
+    transition-timing-function: var(--timing);
     fill: var(--icon-color);
 }
 
 .company-link:hover,
 .company-link:focus {
-    transition-duration: var(--tr-du);
-    transition-timing-function: var(--timing);
+    
     border-color: var(--sub-bg-color);
 }
 .company-link:hover .company-icon,
 .company-link:focus .company-icon {
-    transition-duration: var(--tr-du);
-    transition-timing-function: var(--timing);
+    
     fill: var(--sub-bg-color);
 }
 
@@ -481,6 +500,7 @@ body {
 }
 
 .list-btn .btn {
+    transition: background-color var(--tr-du) var(--timing), color var(--tr-du) var(--timing), box-shadow var(--tr-du) var(--timing);
     padding: 6px 22px;
     display: inline-block;
     font-weight: 500;
@@ -495,8 +515,7 @@ body {
 
 .list-btn .btn:hover,
 .list-btn .btn:focus {
-    transition-duration: var(--tr-du);
-    transition-timing-function: var(--timing);
+    
     background-color: var(--sub-bg-color);
     color: var(--special-text-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
@@ -516,17 +535,22 @@ body {
     flex-wrap: wrap;
     gap: 30px;
 }
-.card-link {
-    text-decoration: none;
-    cursor: pointer;
-}
+
 .card-item {
-    width: 370px;
-}
-.card-item:hover {
+    transition-property: box-shadow;
     transition-duration: var(--tr-du);
     transition-timing-function: var(--timing);
+
+    width: 370px;
+    cursor: pointer;
+}
+.card-item:hover {
+    
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.card-link {
+    text-decoration: none;
+    
 }
 
 .card-wrap {
