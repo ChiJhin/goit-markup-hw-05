@@ -42,7 +42,7 @@ body {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
+    width: 1200px;
 }
 
 
@@ -96,9 +96,7 @@ body {
     color: #212121;
 }
 
-.nav-contact {
-    color: var(--sub-text-color);
-}
+
 
 .nav-link:hover,
 .nav-link:focus {
@@ -128,7 +126,7 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
-    transform: translateY(2px);
+    transform: translateY(1px);
     width: 100%;
     height: 4px;
     background-color: var(--sub-bg-color);
@@ -139,12 +137,23 @@ body {
     display: flex;
     margin-left: auto;
 }
+
+.contact-menu .contact-item:first-child {
+   margin-right: 30px;
+}
+
+.nav-contact {
+    display: flex;
+    align-items: center;
+    color: var(--sub-text-color);
+}
+
 .contact-icon {
     transition-property: fill;
     transition-duration: var(--tr-du);
     transition-timing-function: var(--timing);
     margin-right: 10px;
-    align-items: baseline;
+    
     fill: var(--sub-text-color);
 }
 
@@ -537,20 +546,23 @@ body {
 }
 
 .card-item {
+    width: 370px;
+    
+}
+
+.card-link {
     transition-property: box-shadow;
     transition-duration: var(--tr-du);
     transition-timing-function: var(--timing);
 
-    width: 370px;
-    cursor: pointer;
-}
-.card-item:hover {
-    
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-.card-link {
+    display: block;
     text-decoration: none;
     
+}
+.card-link:hover,
+.card-link:focus {
+    
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-wrap {
@@ -588,12 +600,14 @@ body {
 
     color: var(--special-text-color);
 }
-.card-item:hover .pic-thumb{
+.card-link:hover .pic-thumb,
+.card-link:focus .pic-thumb {
     transform: translateY(0);
     
 }
 
 .title-portfolio {
+    color: #212121;
     margin-bottom: 4px;
     font-size: 18px;
     line-height: 2;
@@ -603,6 +617,9 @@ body {
 .text-portfolio {
     font-size: 16px;
     line-height: 1.88;
+
+/* -------------------Модальне вікно----------------------- */
+
 }
 .backdrop {
     position: fixed;
@@ -658,19 +675,8 @@ body {
     opacity: 0;
     
 }
-@keyframes modal {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-@keyframes modalClose {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0);
-    }
-}
+
+
+
+
+
