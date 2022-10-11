@@ -41,7 +41,7 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-    max-width: 1200px;
+   width: 1200px;
 }
 
 
@@ -237,7 +237,7 @@ body {
 /* Герой */
 
 .hero {
-    padding: 200px;
+    padding: 200px 0;
     background-color: var(--main-bg-color);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
     background-repeat: no-repeat;
@@ -246,8 +246,9 @@ body {
    
     
 }
-.hero  .container {
+.hero > .container {
     text-align: center;
+    max-width: 1200px;
     
 }
 .hero-title {
