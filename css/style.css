@@ -634,7 +634,7 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
 
 }
-.backdrop.is-hidden {
+.is-hidden {
     visibility: hidden;
     pointer-events: none;
     opacity: 0;
@@ -658,8 +658,8 @@ body {
     rgba(0, 0, 0, 0.14), 0px 2px 1px 
     rgba(0, 0, 0, 0.2);
 }
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0);
+.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
 .close-button {
