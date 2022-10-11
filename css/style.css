@@ -367,8 +367,8 @@ body {
     height: 70px;
     width: 100%;
     
-    background-color: #2f303a;
-    opacity: 0.8;
+    background-color: rgba(47, 48, 58, 0.8);
+    
 
 }
 .poster-text {
@@ -659,7 +659,7 @@ body {
     rgba(0, 0, 0, 0.2);
 }
 .is-hidden .modal {
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .close-button {
